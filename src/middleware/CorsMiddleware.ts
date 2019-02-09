@@ -16,7 +16,7 @@ class CorsMiddleware {
       res.header('Access-Control-Allow-Origin', req.headers.origin); // Inject origin from request header
       res.header('Access-Control-Allow-Methods', 'GET,PUT,POST,DELETE,OPTIONS,PATCH');
       res.header('Access-Control-Allow-Headers',
-        'Content-Type, Authorization, Content-Length, X-Requested-With, x-http-method-override, X-GRIP-Tenant-Id');
+        'Content-Type, Authorization, Content-Length, X-Requested-With, x-http-method-override');
 
       // Allow authentication cookies
       res.header('Access-Control-Allow-Credentials', 'true');

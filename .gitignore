@@ -3,9 +3,6 @@
 # Output for npm run lint
 tslint-errors.log
 
-# Backend grip-logger log
-lec-sfc-be.log
-
 # compiled output
 /build
 /dist

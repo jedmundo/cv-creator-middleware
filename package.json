@@ -4,8 +4,8 @@
   "description": "Middleware for the CV-Creator app",
   "scripts": {
     "build": "tsc",
-    "start": "ts-node ./src/server.ts",
-    "dev:watch": "nodemon --config ./config/nodemon.json",
+    "dev": "ts-node ./src/server.ts",
+    "start": "nodemon --config ./config/nodemon.json",
     "lint": "tslint --project \".\" \"src/**/*.ts\" --out \"tslint-errors.log\"",
     "test": "nyc mocha",
     "test:watch": "mocha --watch"
