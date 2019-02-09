@@ -1,0 +1,40 @@
+{
+  "version": "1.0.0",
+  "port": 4040,
+  "authentication": {
+    "gripGetAuthTokenUri": "https://auth.tst.onkpn.com/v2/oidc/idp/token",
+    "gripValidateTokenUri": "https://auth.tst.onkpn.com/v2/oidc/idp/userinfo",
+    "clientSecret": "0nlin3S3lfC@r3"
+  },
+  "log": {
+    "path": "./",
+    "filename": "/lec-sfc-be.log",
+    "logToConsole": true,
+    "level": "debug"
+  },
+  "cors": {
+    "whitelist": [
+      "http://localhost:5555",
+      "https://api.tst.onkpn.com",
+      "https://api.acc.onkpn.com",
+      "https://api.grip-on-it.com",
+      "https://mijnzakelijk.tst.invote.nl",
+      "https://mijnzakelijk.acc.invote.nl",
+      "https://mijnzakelijk.invote.nl",
+      "https://tst.onkpn.com",
+      "https://acc.onkpn.com",
+      "https://onkpn.com",
+      "https://mijnzakelijk.kpn.com",
+      "https://www.api.tst.onkpn.com",
+      "https://www.api.acc.onkpn.com",
+      "https://www.api.grip-on-it.com",
+      "https://www.mijnzakelijk.tst.invote.nl",
+      "https://www.mijnzakelijk.acc.invote.nl",
+      "https://www.mijnzakelijk.invote.nl",
+      "https://www.tst.onkpn.com",
+      "https://www.acc.onkpn.com",
+      "https://www.onkpn.com",
+      "https://www.mijnzakelijk.kpn.com"
+    ]
+  }
+}
