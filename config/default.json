@@ -6,6 +6,9 @@
     "clientId": "8697fgt86y55wy",
     "clientSecret": "G3Q4bevKcl5Ttejs"
   },
+  "linkedIn": {
+    "profile": "https://api.linkedin.com/v2/me"
+  },
   "cors": {
     "whitelist": [
       "http://localhost:3000"

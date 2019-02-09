@@ -6,6 +6,7 @@ import express from 'express';
 import CorsMiddleware from './middleware/CorsMiddleware';
 import ErrorMiddleware from './middleware/ErrorMiddleware';
 import AuthenticationRouter from './routers/authentication.router';
+import linkedInRouter from './routers/linkedIn.router';
 
 class App {
 
@@ -35,6 +36,7 @@ class App {
     const versionRoute = `/v${version}`;
 
     this.app.use(`${versionRoute}/auth`, AuthenticationRouter);
+    this.app.use(`${versionRoute}/info`, linkedInRouter);
   }
 }
 
