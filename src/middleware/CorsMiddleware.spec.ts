@@ -1,7 +1,7 @@
-import { NextFunction, Request, Response } from 'express';
-import sinon from 'sinon';
-import proxyquire from 'proxyquire';
 import { expect } from 'chai';
+import { NextFunction, Request, Response } from 'express';
+import proxyquire from 'proxyquire';
+import sinon from 'sinon';
 
 import { HTTP_STATUS_CODES } from '../util/http-status-codes';
 

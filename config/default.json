@@ -8,9 +8,7 @@
   },
   "cors": {
     "whitelist": [
-      "http://localhost:5555",
-      "https://api.tst.onkpn.com",
-      "https://api.acc.onkpn.com"
+      "http://localhost:3000"
     ]
   }
 }
