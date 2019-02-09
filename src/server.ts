@@ -1,5 +1,5 @@
-import http from 'http';
 import config from 'config';
+import http from 'http';
 
 import app from './app';
 import errorEventHandler from './event-handlers/ErrorEventHandler';

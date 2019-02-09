@@ -10,7 +10,7 @@ class AuthenticationRouter {
   public router: express.Router;
 
   constructor() {
-    console.debug('Initialized AuthenticationRouter');
+    console.debug('Initialized Authentication Router');
 
     this.router = Router();
     this.setupRoutes();
@@ -25,12 +25,11 @@ class AuthenticationRouter {
       checkRequest(req, res);
 
       const authenticationCode = req.body.code;
-      const clientId = req.body.clientId;
-      const returnUri = req.body.returnUri;
+      const returnUri = req.body.redirect_uri;
       console.debug(`Received a call to retrieve a token for code ${authenticationCode}`);
 
       try {
-        const response = await AuthenticationService.getLinkedInAccessToken(authenticationCode, clientId, returnUri);
+        const response = await AuthenticationService.getLinkedInAccessToken(authenticationCode, returnUri);
         console.debug(`Response was: ${JSON.stringify(response)}`);
         const access_token = response.access_token;
 

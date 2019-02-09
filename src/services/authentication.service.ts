@@ -15,12 +15,11 @@ class AuthenticationService {
 
   public async getLinkedInAccessToken(
     authenticationCode: string,
-    clientId: string,
     returnUri: string
   ): Promise<GetLinkedInTokenResponse | null> {
 
     const formData = {
-      client_id: clientId,
+      client_id: config.get('authentication.clientId'),
       client_secret: config.get('authentication.clientSecret'),
       code: authenticationCode,
       grant_type: 'authorization_code',

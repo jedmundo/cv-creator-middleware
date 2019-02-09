@@ -5,9 +5,7 @@ import express from 'express';
 
 import CorsMiddleware from './middleware/CorsMiddleware';
 import ErrorMiddleware from './middleware/ErrorMiddleware';
-import PageNotFoundMiddleware from './middleware/PageNotFoundMiddleware';
 import AuthenticationRouter from './routers/authentication.router';
-import IndexRouter from './routers/index.router';
 
 class App {
 
@@ -29,7 +27,6 @@ class App {
   }
 
   private configAfterRoutes(): void {
-    this.app.use(PageNotFoundMiddleware);
     this.app.use(ErrorMiddleware);
   }
 
@@ -38,10 +35,7 @@ class App {
     const versionRoute = `/v${version}`;
 
     this.app.use(`${versionRoute}/auth`, AuthenticationRouter);
-
-    this.app.get('*', IndexRouter);
   }
-
 }
 
 export default new App().app;
